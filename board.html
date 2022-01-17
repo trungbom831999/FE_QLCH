@@ -9,17 +9,21 @@
     <script src="/bootstrap/jquery.min.js"></script>
     <script src="/bootstrap/popper.min.js"></script>
     <script src="/bootstrap/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/vue/vuetify.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/card.css">
 </head>
 
 <body>
+    <div id="app">
+        <v-app id="inspire">
+            <!-- Masthead -->
+            <header class="masthead">
 
-    <!-- Masthead -->
-    <header class="masthead">
-
-        <!-- <div class="boards-menu">
+                <!-- <div class="boards-menu">
 
             <button class="boards-btn btn"><i class="fab fa-trello boards-btn-icon"></i>Home</button>
 
@@ -30,13 +34,13 @@
 
         </div> -->
 
-        <div class="logo">
+                <div class="logo">
 
-            <h2>Header</h2>
+                    <h2>Header</h2>
 
-        </div>
+                </div>
 
-        <!-- <div class="user-settings">
+                <!-- <div class="user-settings">
 
             <button class="user-settings-btn btn" aria-label="Create">
                 <i class="fas fa-plus" aria-hidden="true"></i>
@@ -56,331 +60,416 @@
 
         </div> -->
 
-    </header>
-    <!-- End of masthead -->
+            </header>
+            <!-- End of masthead -->
 
 
-    <!-- Board info bar -->
-    <section class="board-info-bar">
+            <!-- Board info bar -->
+            <section class="board-info-bar">
 
-        <div class="board-controls">
+                <div class="board-controls">
 
-            <div class="board-title text-center">
-                <p class="text-center m-0">Cuộc họp ABC</p>
-            </div>
-
-            <div class="board-search">
-                <input type="search" class="board-search-input" aria-label="Board Search">
-                <i class="fas fa-search search-icon" aria-hidden="true"></i>
-            </div>
-
-        </div>
-
-        <button class="menu-btn btn"><i class="fas fa-ellipsis-h menu-btn-icon" aria-hidden="true"></i>Menu</button>
-
-    </section>
-    <!-- End of board info bar -->
-
-    <!-- Lists container -->
-    <section class="lists-container">
-
-        <div class="list">
-
-            <p class="list-title">Cần làm</p>
-
-            <ul class="list-items">
-                <li>
-                    <div class="card" style="width:auto;">
-                        <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body card-body-center">
-                            <p class="card-title">Code UI</p>
-                            <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
-                        </div>
+                    <div class="board-title text-center">
+                        <p class="text-center m-0">Cuộc họp ABC</p>
                     </div>
-                </li>
-                <li>
-                    <div class="card" style="width:auto;">
-                        <div class="card-body card-body-center">
-                            <p class="card-title">Tìm hiểu UX</p>
-                            <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
-                        </div>
+
+                    <div class="board-search">
+                        <input type="search" class="board-search-input" aria-label="Board Search">
+                        <i class="fas fa-search search-icon" aria-hidden="true"></i>
                     </div>
-                </li>
-                <li>
-                    <div class="card" style="width:auto;">
-                        <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body card-body-center">
-                            <p class="card-title">Code UI</p>
-                            <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
 
-            <button class="add-card-btn btn">Thêm thẻ mới</button>
-
-        </div>
-
-        <div class="list">
-
-            <h3 class="list-title">Đang thực hiện</h3>
-
-            <ul class="list-items">
-                <li>
-                    <div class="card" style="width:auto;">
-                        <div class="card-body card-body-center">
-                            <p class="card-title">Design flex cho bảng</p>
-                            <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card" style="width:auto;">
-                        <div class="card-body card-body-center">
-                            <p class="card-title">Design flex cho cột</p>
-                            <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card" style="width:auto;">
-                        <div class="card-body card-body-center">
-                            <p class="card-title">Design flex cho thẻ</p>
-                            <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="add-card-btn btn">Thêm thẻ mới</button>
-
-        </div>
-
-        <div class="list">
-
-            <h3 class="list-title">Hoàn thành</h3>
-
-            <ul class="list-items">
-                <li>
-                    <div class="card" style="width:auto;">
-                        <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
-                        <div class="card-body card-body-center">
-                            <p class="card-title">Tìm hiểu Kanban</p>
-                            <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="card" style="width:auto;">
-                        <div class="card-body card-body-center">
-                            <p class="card-title">Nhận danh sách API</p>
-                            <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
-            <button class="add-card-btn btn">Thêm thẻ mới</button>
-
-        </div>
-
-        <div class="list">
-
-            <h3 class="list-title">Đã loại bỏ</h3>
-
-            <ul class="list-items">
-
-            </ul>
-
-            <button class="add-card-btn btn">Thêm thẻ mới</button>
-
-        </div>
-
-        <div class="list">
-
-            <h3 class="list-title">Công việc 1</h3>
-
-            <ul class="list-items">
-                <li>Code Academy</li>
-                <li>CodePen</li>
-                <li>Codrops</li>
-                <li>CSS-Tricks</li>
-                <li>Free Code Camp</li>
-                <li>Khan Academy</li>
-                <li>Lynda</li>
-                <li>Medium</li>
-                <li>Mozilla Developer Network</li>
-                <li>Stack Overflow</li>
-                <li>Team Treehouse</li>
-                <li>Tuts Plus</li>
-                <li>Udemy</li>
-                <li>WPSessions</li>
-                <li>YouTube</li>
-            </ul>
-
-            <button class="add-card-btn btn">Thêm thẻ mới</button>
-
-        </div>
-
-        <div class="list">
-
-            <h3 class="list-title">Công việc 2</h3>
-
-            <ul class="list-items">
-
-            </ul>
-
-            <button class="add-card-btn btn">Thêm thẻ mới</button>
-
-        </div>
-
-        <div class="list">
-
-            <h3 class="list-title">Công việc 3</h3>
-
-            <ul class="list-items">
-
-            </ul>
-
-            <button class="add-card-btn btn">Thêm thẻ mới</button>
-
-        </div>
-
-        <button class="add-list-btn btn">Thêm cột mới</button>
-
-    </section>
-    <!-- End of lists container -->
-
-    <div class="modal fade" id="workPopup">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <!-- <h4 class="modal-title">Code UI</h4> -->
-                    <form class="form-inline" action="/action_page.php">
-                        <label for="email">Tiến độ:</label>
-                        <select name="cars" class="custom-select">
-                            <option selected>0%</option>
-                            <option value="volvo">50%</option>
-                            <option value="fiat">80%</option>
-                            <option value="audi">100% - Hoàn thành</option>
-                        </select>
-                    </form>
-
-
-                    <button type="button" class="close" data-dismiss="modal" title="Đóng">&times;</button>
                 </div>
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="container" style="padding: 0">
-                        <div id="cover-img">
-                            <img id="update-avatar" style="border-style: double; border-color: #ebebe0; border-radius: 5px; " src="/img/ca.png" title="Đổi ảnh bìa" />
-                            <input type="file" id="img-upload" accept=".png, .jpg, .jpeg">
-                            <!-- <button type="submit" id="saveCoverImg" class="btn btn-primary mt-2" style="display: block;">Lưu</button> -->
-                        </div>
-                    </div>
-                    <div class="container" style="margin-top: -5px">
-                        <div id="card-name">
-                            <span class="spanToInput span-cardname">Tên công việc</span>
-                        </div>
+                <button class="menu-btn btn"><i class="fas fa-ellipsis-h menu-btn-icon"
+                        aria-hidden="true"></i>Menu</button>
 
-                        <div class="row">
-                            <div class="col-sm-9">
-                                <div id="show-deadline">
-                                    <p><i class='far fa-calendar-times'></i> Deadline</p>
-                                    <p id="deadline-date"></p>
-                                    <p id="deadline-time"></p>
+            </section>
+            <!-- End of board info bar -->
+
+            <!-- Lists container -->
+            <section class="lists-container">
+
+                <div class="list">
+
+                    <p class="list-title">Cần làm</p>
+
+                    <ul class="list-items">
+                        <li>
+                            <div class="card" style="width:auto;">
+                                <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
+                                <div class="card-body card-body-center">
+                                    <p class="card-title">Code UI</p>
+                                    <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card" style="width:auto;">
+                                <div class="card-body card-body-center">
+                                    <p class="card-title">Tìm hiểu UX</p>
+                                    <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card" style="width:auto;">
+                                <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
+                                <div class="card-body card-body-center">
+                                    <p class="card-title">Code UI</p>
+                                    <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
 
-                                <form action="" method="post">
-                                    <div class="form-group">
-                                        <label for="description-card"><i class='fas fa-rainbow'></i> Mô tả</label>
-                                        <textarea class="form-control" rows="5" id="description-card" name="description-card"></textarea>
-                                    </div>
-                                    <!-- <button type="submit" class="btn btn-primary">Lưu</button> -->
-                                </form>
-                                <hr>
+                    <button class="add-card-btn btn">Thêm thẻ mới</button>
 
-                                <form action="" method="post" style="margin-bottom: 30px">
-                                    <p><i class='fas fa-paperclip'></i> Tập đính kèm</p>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                        <label class="custom-file-label" for="customFile">Chọn file</label>
-                                        <!-- <button type="submit" id="saveFile" class="btn btn-primary mt-2">Lưu</button> -->
-                                    </div>
-                                </form>
-                                <hr>
-                                <p><i class='fab fa-rocketchat'></i> Bình luận</p>
-                                <div class="my-comment">
-                                    <form class="mb-3" action="" method="post">
+                </div>
+
+                <div class="list">
+
+                    <h3 class="list-title">Đang thực hiện</h3>
+
+                    <ul class="list-items">
+                        <li>
+                            <div class="card" style="width:auto;">
+                                <div class="card-body card-body-center">
+                                    <p class="card-title">Design flex cho bảng</p>
+                                    <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card" style="width:auto;">
+                                <div class="card-body card-body-center">
+                                    <p class="card-title">Design flex cho cột</p>
+                                    <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card" style="width:auto;">
+                                <div class="card-body card-body-center">
+                                    <p class="card-title">Design flex cho thẻ</p>
+                                    <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+
+                </div>
+
+                <div class="list">
+
+                    <h3 class="list-title">Hoàn thành</h3>
+
+                    <ul class="list-items">
+                        <li>
+                            <div class="card" style="width:auto;">
+                                <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
+                                <div class="card-body card-body-center">
+                                    <p class="card-title">Tìm hiểu Kanban</p>
+                                    <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card" style="width:auto;">
+                                <div class="card-body card-body-center">
+                                    <p class="card-title">Nhận danh sách API</p>
+                                    <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+
+                </div>
+
+                <div class="list">
+
+                    <h3 class="list-title">Đã loại bỏ</h3>
+
+                    <ul class="list-items">
+
+                    </ul>
+
+                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+
+                </div>
+
+                <div class="list">
+
+                    <h3 class="list-title">Công việc 1</h3>
+
+                    <ul class="list-items">
+                        <li>Code Academy</li>
+                        <li>CodePen</li>
+                        <li>Codrops</li>
+                        <li>CSS-Tricks</li>
+                        <li>Free Code Camp</li>
+                        <li>Khan Academy</li>
+                        <li>Lynda</li>
+                        <li>Medium</li>
+                        <li>Mozilla Developer Network</li>
+                        <li>Stack Overflow</li>
+                        <li>Team Treehouse</li>
+                        <li>Tuts Plus</li>
+                        <li>Udemy</li>
+                        <li>WPSessions</li>
+                        <li>YouTube</li>
+                    </ul>
+
+                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+
+                </div>
+
+                <div class="list">
+
+                    <h3 class="list-title">Công việc 2</h3>
+
+                    <ul class="list-items">
+
+                    </ul>
+
+                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+
+                </div>
+
+                <div class="list">
+
+                    <h3 class="list-title">Công việc 3</h3>
+
+                    <ul class="list-items">
+
+                    </ul>
+
+                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+
+                </div>
+
+                <button class="add-list-btn btn">Thêm cột mới</button>
+
+            </section>
+            <!-- End of lists container -->
+
+            <div class="modal fade p-0" id="workPopup">
+                <div class="modal-dialog modal-100 modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header py-1">
+                            <h5 class="modal-title">{{cardName}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" title="Đóng">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="" style="padding: 0">
+                                <div id="cover-img">
+                                    <img id="update-avatar" style="border-style: double; border-color: #ebebe0; border-radius: 5px; " src="/img/ca.png" title="Đổi ảnh bìa" />
+                                    <input type="file" id="img-upload" accept=".png, .jpg, .jpeg">
+                                    <!-- <button type="submit" id="saveCoverImg" class="btn btn-primary mt-2" style="display: block;">Lưu</button> -->
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="row m-0">
+                                    <div class="col-12 col-md-6">
+                                        <!-- Thông tin cơ bản -->
+                                        <div class="form-group mb-3">
+                                            <p class="font-weight-bold float-left mb-0">Công việc:</p>
+                                            </br>
+                                            <v-text-field v-model="cardName" :rules="rules" hide-details="auto">
+                                            </v-text-field>
+                                        </div>
+
+                                        <div class="form-group mb-0">
+                                            <p class="font-weight-bold float-left mb-0">Thuộc cột:</p><br>
+                                            <v-autocomplete v-model="column" :items="listColumn" :readonly=false no-data-text="Không có dữ liệu">
+                                            </v-autocomplete>
+                                        </div>
+
                                         <div class="form-group">
-                                            <textarea class="form-control" id="myCmt" rows="2" placeholder="Viết bình luận..."></textarea>
+                                            <label for="description-card"><i class='fas fa-rainbow'></i> Mô tả</label>
+                                            <textarea class="form-control" rows="5" id="description-card" name="description-card"></textarea>
                                         </div>
-                                        <button id="cmt" type="submit" class="btn btn-primary">Bình luận</button>
-                                    </form>
-                                </div>
+                                        <hr>
+                                        <!-- Thông tin chi tiết  -->
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="form-group mb-0">
+                                                    <p v-if="completion==100" class="font-weight-bold float-left mb-0">
+                                                        Tiến độ hoàn thành: <span class="text-primary">Hoàn thành</span>
+                                                    </p>
+                                                    <p v-else class="font-weight-bold float-left mb-0">Tiến độ hoàn thành:
+                                                        <input type="number" min="0" max="100" v-model="completion">%
+                                                    </p>
+                                                    <br>
+                                                    <input v-model="completion" type="range" class="custom-range" min="0" max="100">
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                <div class="comment-list">
-                                    <div class="a-comment">
-                                        <img class="rounded-circle" src="/img/avt1.png" alt="my avatar" style="height: 40px">
-                                        <a class="link-profile-member"> Member Name 1</a>
-                                        <div class="comment container">
-                                            <p>Đây là comment của member 1</p>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <p class="font-weight-bold float-left mb-0">Ngày bắt đầu:</p><br>
+                                                <v-menu ref="menu" v-model="menu" :close-on-content-click="false" :return-value.sync="dateStart" transition="scale-transition" offset-y min-width="auto">
+                                                    <template v-slot:activator="{ on, attrs }">
+                                                        <v-text-field v-model="dateStart" prepend-icon="mdi-calendar"
+                                                            type="date" v-bind="attrs" v-on="on"
+                                                            @input="$refs.menu.save(dateStart)">
+                                                        </v-text-field>
+                                                    </template>
+                                                    <v-date-picker v-model="dateStart" @input="$refs.menu.save(dateStart)" no-title scrollable locale="vi-CZ" next-icon="mdi-arrow-right" prev-icon="mdi-arrow-left" style="max-height: 400px">
+                                                        <v-spacer></v-spacer>
+                                                        <v-btn text color="primary" @click="menu = false">
+                                                            Đóng
+                                                        </v-btn>
+                                                    </v-date-picker>
+                                                </v-menu>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <p class="font-weight-bold float-left mb-0">Ngày kết thúc:</p><br>
+                                                <v-menu ref="menu2" v-model="menu2" :close-on-content-click="false" :return-value.sync="dateEnd" transition="scale-transition" offset-y min-width="auto">
+                                                    <template v-slot:activator="{ on, attrs }">
+                                                        <v-text-field v-model="dateEnd" prepend-icon="mdi-calendar"
+                                                            type="date" v-bind="attrs" v-on="on"
+                                                            @input="$refs.menu2.save(dateEnd)">
+                                                        </v-text-field>
+                                                    </template>
+                                                    <v-date-picker v-model="dateEnd" @input="$refs.menu2.save(dateEnd)" no-title scrollable locale="vi-CZ" next-icon="mdi-arrow-right" prev-icon="mdi-arrow-left" style="max-height: 400px">
+                                                        <v-spacer></v-spacer>
+                                                        <v-btn text color="primary" @click="menu2 = false">
+                                                            Đóng
+                                                        </v-btn>
+                                                    </v-date-picker>
+                                                </v-menu>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <p><i class="far fa-user"></i> Thành viên</p>
+                                            <v-autocomplete v-model="friends" :disabled="isUpdating" :items="people" chips item-text="name" item-value="name" multiple>
+                                                <template v-slot:selection="data">
+                                                    <v-chip v-bind="data.attrs" :input-value="data.selected" close
+                                                        @click="data.select" @click:close="remove(data.item)"
+                                                        color="primary">
+                                                        <v-avatar left>
+                                                            <v-img :src="data.item.avatar"></v-img>
+                                                        </v-avatar>
+                                                        {{ data.item.name }}
+                                                    </v-chip>
+                                                </template>
+                                                <template v-slot:item="data">
+                                                    <template v-if="typeof data.item !== 'object'">
+                                                        <v-list-item-content v-text="data.item"></v-list-item-content>
+                                                    </template>
+                                                <template v-else>
+                                                        <v-list-item-avatar>
+                                                            <img :src="data.item.avatar">
+                                                        </v-list-item-avatar>
+                                                        <v-list-item-content>
+                                                            <v-list-item-title v-html="data.item.name">
+                                                            </v-list-item-title>
+                                                            <v-list-item-subtitle v-html="data.item.group">
+                                                            </v-list-item-subtitle>
+                                                        </v-list-item-content>
+                                                    </template>
+                                                </template>
+                                            </v-autocomplete>
                                         </div>
                                     </div>
 
-                                    <div class="a-comment">
-                                        <img class="rounded-circle" src="/img/avt2.png" alt="my avatar" style="height: 40px">
-                                        <a class="link-profile-member"> Member Name 2</a>
-                                        <div class="comment container">
-                                            <p>Đây là comment của member 2</p>
-                                        </div>
-                                    </div>
+                                    <!-- thông tin cột phải  -->
+                                    <div class="col-12 col-md-6">
+                                        <v-tabs>
+                                            <v-tab>
+                                                <v-icon left>
+                                                    mdi-comment-multiple
+                                                </v-icon>
+                                                Bình luận
+                                            </v-tab>
+                                            <v-tab>
+                                                <v-icon left>
+                                                    mdi-file
+                                                </v-icon>
+                                                Tài liệu
+                                            </v-tab>
+                                            <v-tab>
+                                                <v-icon left>
+                                                    mdi-history
+                                                </v-icon>
+                                                Lịch sử
+                                            </v-tab>
 
-                                    <div class="a-comment">
-                                        <img class="rounded-circle" src="/img/avt3.png" alt="my avatar" style="height: 40px">
-                                        <a class="link-profile-member"> Member Name 3</a>
-                                        <div class="comment container">
-                                            <p>Đây là comment của member 3</p>
-                                        </div>
+                                            <v-tab-item>
+                                                <div class="my-comment">
+                                                    <form class="mb-3" action="" method="post">
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" id="myCmt" rows="2" placeholder="Viết bình luận..."></textarea>
+                                                        </div>
+                                                        <button id="cmt" class="btn btn-primary">Bình
+                                                            luận</button>
+                                                    </form>
+                                                </div>
+
+                                                <div class="comment-list">
+                                                    <div class="a-comment">
+                                                        <img class="rounded-circle" src="/img/avt1.png" alt="my avatar" style="height: 40px">
+                                                        <a class="link-profile-member"> Member Name 1</a>
+                                                        <div class="comment container">
+                                                            <p>Đây là comment của member 1</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="a-comment">
+                                                        <img class="rounded-circle" src="/img/avt2.png" alt="my avatar" style="height: 40px">
+                                                        <a class="link-profile-member"> Member Name 2</a>
+                                                        <div class="comment container">
+                                                            <p>Đây là comment của member 2</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="a-comment">
+                                                        <img class="rounded-circle" src="/img/avt3.png" alt="my avatar" style="height: 40px">
+                                                        <a class="link-profile-member"> Member Name 3</a>
+                                                        <div class="comment container">
+                                                            <p>Đây là comment của member 3</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </v-tab-item>
+                                            <v-tab-item>
+                                                Tài liệu
+                                            </v-tab-item>
+                                            <v-tab-item>
+                                                Lịch sử Readonly
+                                            </v-tab-item>
+                                        </v-tabs>
+
+
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-sm-3">
-                                <div>
-                                    <p><i class="far fa-user"></i> Thành viên</p>
-                                    <img class="rounded-circle" src="/img/avt1.png" alt="my avatar" style="height: 40px" title="Member 1">
-                                    <img class="rounded-circle" src="/img/avt2.png" alt="my avatar" style="height: 40px" title="Member 2">
-                                    <img class="rounded-circle" src="/img/avt3.png" alt="my avatar" style="height: 40px" title="Member 3">
-                                </div>
-                                <div>
-                                    <button id="deadline" class="btn btn-primary"><i class='far fa-clock'></i>
-                                        Tác vụ khác</button>
-                                    <div id="formDeadline" class="form-group">
-                                        <input class="form-control mt-2" type="date">
-                                        <input class="form-control mt-2" type="time">
-                                        <!-- <button type="submit" id="saveDeadline" class="btn btn-primary mt-2">Lưu</button> -->
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer py-1">
+                            <button class="btn btn-primary">Lưu</button>
+                            <button class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                        </div>
+
                     </div>
                 </div>
-
-                <!-- Modal footer -->
-                <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
-            </div> -->
-
             </div>
-        </div>
+        </v-app>
     </div>
 </body>
 
+<script src="/vue/vue.js"></script>
+<script src="/vue/vuetify.js"></script>
 <script src="main.js"></script>
 
 </html>

@@ -37,6 +37,12 @@
     background: #555;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -212,7 +218,7 @@ body {
     align-items: start;
     padding: 0 0.8rem 0.8rem;
     overflow-x: auto;
-    height: calc(100vh - 8.6rem);
+    height: calc(100vh - 7rem);
 }
 
 .list {
@@ -241,8 +247,9 @@ body {
     display: flex;
     flex-direction: column;
     align-content: start;
-    padding: 0 0.6rem 0.5rem;
+    padding: 0 3px;
     overflow-y: auto;
+    list-style-type: none;
 }
 
 .list-items li {
@@ -316,11 +323,11 @@ Remove or comment-out the code block below to see how the browser will fall-back
 */
 
 @supports (display: grid) {
-    body {
+    /* body {
         display: grid;
         grid-template-rows: 4rem 3rem auto;
         grid-row-gap: 0.8rem;
-    }
+    } */
     .masthead {
         display: grid;
         grid-template-columns: auto 1fr auto;
@@ -364,4 +371,136 @@ Remove or comment-out the code block below to see how the browser will fall-back
     .user-settings-btn {
         margin: 0;
     }
+}
+
+
+/*modal*/
+
+.modal-100 {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-100 .modal-content {
+    max-height: 100% !important;
+    min-height: 100%;
+    border-radius: 0;
+}
+
+
+/*custom vuuetify*/
+
+
+/* .theme--light.v-text-field>.v-input__control>.v-input__slot:before {
+    border-color: rgba(0, 0, 0, 0);
+} */
+
+
+/*input*/
+
+.v-text-field {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+
+/*date picker*/
+
+.ms-date-picker-container .icon-datepicker {
+    background-color: #fff;
+    cursor: pointer;
+    display: block;
+    width: 32px;
+    font-size: 16px;
+    color: #757575;
+    background-position-x: -120px;
+    height: 100%;
+}
+
+.ms-input-date .ms-input-title {
+    font-size: 12px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    white-space: nowrap;
+}
+
+.ms-input-date .ms-input-title-label {
+    height: 100%;
+}
+
+.ms-input-date .ms-input-title-require {
+    color: red;
+    margin-left: 4px;
+}
+
+.ms-input-date .form-date {
+    border: 1px solid #babec5;
+    width: 100%;
+    height: 32px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: flex;
+    place-items: center;
+}
+
+.ms-input-date .input-date:not(:focus) .form-date:hover {
+    outline: 1px solid #e2e2e2;
+}
+
+.ms-input-date .input-date {
+    border-radius: 2px;
+    flex: 1;
+    min-height: 0;
+    height: 100%;
+    min-width: 0;
+    background-color: #fff;
+}
+
+.ms-input-date .input-date:focus .form-date:not(.error) {
+    border-color: #2ca01c;
+}
+
+.ms-input-date input {
+    border: none;
+    padding: 5px 10px;
+    width: 100%;
+    font-size: 13px;
+    padding-right: 0;
+}
+
+.ms-input-date .icon-datepicker {
+    background-color: #fff;
+    cursor: pointer;
+    display: block;
+    width: 32px;
+    font-size: 16px;
+    color: #757575;
+    background-position-x: -120px;
+    height: 100%;
+}
+
+.ms-input-date .v-input__append-inner {
+    margin: 0;
+}
+
+.ms-input-date .v-text-field--outlined {
+    border-radius: 2px;
+}
+
+.ms-input-date .v-input__slot {
+    background-color: #fff !important;
+}
+
+.ms-input-date .v-text-field .v-input__append-inner {
+    padding: 2px;
+}
+
+.ms-input-date .v-text-field--outlined fieldset {
+    top: -6.5px;
+}
+
+.v-date-picker-table thead {
+    border-bottom: 1px solid #e0e0e0;
 }
