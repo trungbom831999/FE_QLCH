@@ -267,13 +267,7 @@
 
                         <!-- Modal body -->
                         <div class="modal-body">
-                            <div class="" style="padding: 0">
-                                <div id="cover-img">
-                                    <img id="update-avatar" style="border-style: double; border-color: #ebebe0; border-radius: 5px; " src="/img/ca.png" title="Đổi ảnh bìa" />
-                                    <input type="file" id="img-upload" accept=".png, .jpg, .jpeg">
-                                    <!-- <button type="submit" id="saveCoverImg" class="btn btn-primary mt-2" style="display: block;">Lưu</button> -->
-                                </div>
-                            </div>
+
                             <div class="">
                                 <div class="row m-0">
                                     <div class="col-12 col-md-6">
@@ -405,9 +399,9 @@
                                             </v-tab>
 
                                             <v-tab-item>
-                                                <div class="my-comment">
-                                                    <form class="mb-3" action="" method="post">
-                                                        <div class="form-group">
+                                                <div class="my-comment mt-2">
+                                                    <form class="mb-2">
+                                                        <div class="form-group mb-2">
                                                             <textarea class="form-control" id="myCmt" rows="2" placeholder="Viết bình luận..."></textarea>
                                                         </div>
                                                         <button id="cmt" class="btn btn-primary">Bình
@@ -416,36 +410,64 @@
                                                 </div>
 
                                                 <div class="comment-list">
-                                                    <div class="a-comment">
-                                                        <img class="rounded-circle" src="/img/avt1.png" alt="my avatar" style="height: 40px">
-                                                        <a class="link-profile-member"> Member Name 1</a>
+                                                    <div v-for="cmt in commentList" class="a-comment">
+                                                        <img class="rounded-circle" :src="cmt.avatar" alt="my avatar" style="height: 40px">
+                                                        <a class="link-profile-member"> {{cmt.userName}}</a>
                                                         <div class="comment container">
-                                                            <p>Đây là comment của member 1</p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="a-comment">
-                                                        <img class="rounded-circle" src="/img/avt2.png" alt="my avatar" style="height: 40px">
-                                                        <a class="link-profile-member"> Member Name 2</a>
-                                                        <div class="comment container">
-                                                            <p>Đây là comment của member 2</p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="a-comment">
-                                                        <img class="rounded-circle" src="/img/avt3.png" alt="my avatar" style="height: 40px">
-                                                        <a class="link-profile-member"> Member Name 3</a>
-                                                        <div class="comment container">
-                                                            <p>Đây là comment của member 3</p>
+                                                            <p>{{cmt.content}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="text-center">
+                                                    <v-pagination v-model="pageComment" :length="lengthComment" :total-visible="6"></v-pagination>
+                                                </div>
                                             </v-tab-item>
                                             <v-tab-item>
-                                                Tài liệu
+                                                <v-file-input chips multiple label="Tải tệp lên"></v-file-input>
+                                                <!-- <v-pagination v-model="pageComment" :length="lengthComment"
+                                                        :total-visible="6"></v-pagination> -->
                                             </v-tab-item>
                                             <v-tab-item>
-                                                Lịch sử Readonly
+                                                <v-timeline align-top dense>
+                                                    <v-timeline-item color="primary" small>
+                                                        <v-row class="pt-1">
+                                                            <v-col cols="3">
+                                                                <p class="text-caption">16:26:22 29/12/2021</p>
+                                                            </v-col>
+                                                            <v-col>
+                                                                <div class="text-caption">
+                                                                    Nguyễn Kiên Trung Chỉnh sửa thông tin công việc theo vai trò người thực hiện. Tên công việc mới: Tạo UI ver2. Công việc cha mới: Tạo UI ver2.
+                                                                </div>
+                                                            </v-col>
+                                                        </v-row>
+                                                    </v-timeline-item>
+
+                                                    <v-timeline-item color="primary" small>
+                                                        <v-row class="pt-1">
+                                                            <v-col cols="3">
+                                                                <p class="text-caption">21:15:31 18/01/2022</p>
+                                                            </v-col>
+                                                            <v-col>
+                                                                <div class="text-caption mb-2">
+                                                                    Nguyễn Kiên Trung Chỉnh sửa thông tin công việc theo vai trò người thực hiện. Mô tả công việc mới: Tạo card
+                                                                </div>
+                                                            </v-col>
+                                                        </v-row>
+                                                    </v-timeline-item>
+
+                                                    <v-timeline-item color="primary" small>
+                                                        <v-row class="pt-1">
+                                                            <v-col cols="3">
+                                                                <p class="text-caption">22:05:14 18/01/2022</p>
+                                                            </v-col>
+                                                            <v-col>
+                                                                <div class="text-caption mb-2">
+                                                                    Nguyễn Kiên Trung Chỉnh sửa thông tin đánh giá công việc tháng 01-2022 theo vai trò người thực hiện. Ngày bắt đầu mới: 08:09 26/12/2021. Ngày kết thúc mới: 15:05 18/01/2022.
+                                                                </div>
+                                                            </v-col>
+                                                        </v-row>
+                                                    </v-timeline-item>
+                                                </v-timeline>
                                             </v-tab-item>
                                         </v-tabs>
 

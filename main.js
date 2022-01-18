@@ -62,6 +62,25 @@ new Vue({
                 },
             ],
 
+            commentList: [{
+                    avatar: '/img/avt1.png',
+                    userName: 'Trần Văn A',
+                    content: 'Hoàn thành công việc 1'
+                },
+                {
+                    avatar: '/img/avt2.png',
+                    userName: 'Trần Văn B',
+                    content: 'Đang thực hiện phần 2'
+                },
+                {
+                    avatar: '/img/avt3.png',
+                    userName: 'Trần Văn C',
+                    content: 'Đang code gọi api'
+                },
+            ],
+            pageComment: 1,
+            lengthComment: 15,
+
             //validate input
             rules: [
                 value => !!value || 'Không được để trống',
