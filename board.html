@@ -70,7 +70,7 @@
                 <div class="board-controls">
 
                     <div class="board-title text-center">
-                        <p class="text-center m-0">Cuộc họp ABC</p>
+                        <h5 class="text-center mt-1">Cuộc họp Giao ban - 23/1</h5>
                     </div>
 
                     <div class="board-search">
@@ -96,9 +96,17 @@
                     <ul class="list-items">
                         <li>
                             <div class="card" style="width:auto;">
-                                <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
+                                <!-- <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%"> -->
                                 <div class="card-body card-body-center">
-                                    <p class="card-title">Code UI</p>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <p>Code UI</p>
+                                        </div>
+                                        <div class="col-2 pl-0 d-flex justify-content-center">
+                                            <div class="colorCard" style="background-color: #4464ce;">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
                             </div>
@@ -106,23 +114,39 @@
                         <li>
                             <div class="card" style="width:auto;">
                                 <div class="card-body card-body-center">
-                                    <p class="card-title">Tìm hiểu UX</p>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <p>Tìm hiểu UX</p>
+                                        </div>
+                                        <div class="col-2 pl-0 d-flex justify-content-center">
+                                            <div class="colorCard" style="background-color: #00ff73;">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="card" style="width:auto;">
-                                <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
+                                <!-- <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%"> -->
                                 <div class="card-body card-body-center">
-                                    <p class="card-title">Code UI</p>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <p>Code UI P2</p>
+                                        </div>
+                                        <div class="col-2 pl-0 d-flex justify-content-center">
+                                            <div class="colorCard" style="background-color: #cf8e00;">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
 
-                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+                    <button class="add-card-btn btn" @click="addNewCard()"> + Thêm thẻ mới</button>
 
                 </div>
 
@@ -134,7 +158,15 @@
                         <li>
                             <div class="card" style="width:auto;">
                                 <div class="card-body card-body-center">
-                                    <p class="card-title">Design flex cho bảng</p>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <p>Design flex cho bảng</p>
+                                        </div>
+                                        <div class="col-2 pl-0 d-flex justify-content-center">
+                                            <div class="colorCard" style="background-color: #ff002b;">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
                             </div>
@@ -142,7 +174,16 @@
                         <li>
                             <div class="card" style="width:auto;">
                                 <div class="card-body card-body-center">
-                                    <p class="card-title">Design flex cho cột</p>
+                                    <p></p>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <p>Design flex cho cột</p>
+                                        </div>
+                                        <div class="col-2 pl-0 d-flex justify-content-center">
+                                            <div class="colorCard" style="background-color: #f2ff40;">
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
                             </div>
@@ -150,14 +191,14 @@
                         <li>
                             <div class="card" style="width:auto;">
                                 <div class="card-body card-body-center">
-                                    <p class="card-title">Design flex cho thẻ</p>
+                                    <p>Design flex cho thẻ</p>
                                     <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
 
-                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+                    <button class="add-card-btn btn" @click="addNewCard()"> + Thêm thẻ mới</button>
 
                 </div>
 
@@ -168,9 +209,9 @@
                     <ul class="list-items">
                         <li>
                             <div class="card" style="width:auto;">
-                                <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%">
+                                <!-- <img class="card-img-top" src="/img/anh1.jpg" alt="Card image" style="width:100%"> -->
                                 <div class="card-body card-body-center">
-                                    <p class="card-title">Tìm hiểu Kanban</p>
+                                    <p>Tìm hiểu Kanban</p>
                                     <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
                             </div>
@@ -178,26 +219,14 @@
                         <li>
                             <div class="card" style="width:auto;">
                                 <div class="card-body card-body-center">
-                                    <p class="card-title">Nhận danh sách API</p>
+                                    <p>Nhận danh sách API</p>
                                     <a data-toggle="modal" data-target="#workPopup" data-id="myId" class="stretched-link"></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
 
-                    <button class="add-card-btn btn">Thêm thẻ mới</button>
-
-                </div>
-
-                <div class="list">
-
-                    <h3 class="list-title">Đã loại bỏ</h3>
-
-                    <ul class="list-items">
-
-                    </ul>
-
-                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+                    <button class="add-card-btn btn" @click="addNewCard()"> + Thêm thẻ mới</button>
 
                 </div>
 
@@ -223,7 +252,7 @@
                         <li>YouTube</li>
                     </ul>
 
-                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+                    <button class="add-card-btn btn" @click="addNewCard()"> + Thêm thẻ mới</button>
 
                 </div>
 
@@ -235,7 +264,7 @@
 
                     </ul>
 
-                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+                    <button class="add-card-btn btn" @click="addNewCard()"> + Thêm thẻ mới</button>
 
                 </div>
 
@@ -247,7 +276,7 @@
 
                     </ul>
 
-                    <button class="add-card-btn btn">Thêm thẻ mới</button>
+                    <button class="add-card-btn btn" @click="addNewCard()"> + Thêm thẻ mới</button>
 
                 </div>
 
@@ -261,28 +290,55 @@
                     <div class="modal-content">
                         <!-- Modal Header -->
                         <div class="modal-header py-1">
-                            <h5 class="modal-title">{{cardName}}</h5>
-                            <button type="button" class="close" data-dismiss="modal" title="Đóng">&times;</button>
+                            <div class="float-left">
+                                <h5 class="modal-title">{{cardName}}</h5>
+                            </div>
+                            <div class="float-right flex-row">
+                                <div class="color-picker flex-row">
+                                    <p class="mr-2 m-auto">Nhãn màu: </p>
+                                    <v-text-field v-mask="mask" hide-details class="ma-0 pa-0" solo style="max-width: 100px;" readonly>
+                                        <template v-slot:append>
+                                            <v-menu v-model="menuColor" top nudge-bottom="385" nudge-left="155"
+                                                :close-on-content-click="false">
+                                                <template v-slot:activator="{ on }">
+                                                    <div :style="swatchStyle" v-on="on" />
+                                                </template>
+                                        <v-card>
+                                            <v-card-text class="pa-0">
+                                                <v-color-picker v-model="color" flat show-swatches hide-inputs />
+                                            </v-card-text>
+                                        </v-card>
+                                        </v-menu>
+                                        </template>
+                                    </v-text-field>
+                                </div>
+                                <button type="button" class="close" data-dismiss="modal" title="Đóng">&times;</button>
+                            </div>
+
                         </div>
 
                         <!-- Modal body -->
-                        <div class="modal-body">
-
+                        <div class="modal-body pt-0">
                             <div class="">
                                 <div class="row m-0">
                                     <div class="col-12 col-md-6">
                                         <!-- Thông tin cơ bản -->
-                                        <div class="form-group mb-3">
-                                            <p class="font-weight-bold float-left mb-0">Công việc:</p>
-                                            </br>
-                                            <v-text-field v-model="cardName" :rules="rules" hide-details="auto">
-                                            </v-text-field>
-                                        </div>
-
-                                        <div class="form-group mb-0">
-                                            <p class="font-weight-bold float-left mb-0">Thuộc cột:</p><br>
-                                            <v-autocomplete v-model="column" :items="listColumn" :readonly=false no-data-text="Không có dữ liệu">
-                                            </v-autocomplete>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="form-group mb-3">
+                                                    <p class="font-weight-bold float-left mb-0">Công việc:</p>
+                                                    </br>
+                                                    <v-text-field v-model="cardName" :rules="rules" hide-details="auto">
+                                                    </v-text-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="form-group mb-0">
+                                                    <p class="font-weight-bold float-left mb-0">Thuộc cột:</p><br>
+                                                    <v-autocomplete v-model="column" :items="listColumn" :readonly=false no-data-text="Không có dữ liệu">
+                                                    </v-autocomplete>
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div class="form-group">
@@ -398,6 +454,7 @@
                                                 Lịch sử
                                             </v-tab>
 
+                                            <!-- tab bình luận -->
                                             <v-tab-item>
                                                 <div class="my-comment mt-2">
                                                     <form class="mb-2">
@@ -413,28 +470,40 @@
                                                     <div v-for="cmt in commentList" class="a-comment">
                                                         <img class="rounded-circle" :src="cmt.avatar" alt="my avatar" style="height: 40px">
                                                         <a class="link-profile-member"> {{cmt.userName}}</a>
-                                                        <div class="comment container">
+                                                        <div class="comment">
                                                             <p>{{cmt.content}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="text-center">
-                                                    <v-pagination v-model="pageComment" :length="lengthComment" :total-visible="6"></v-pagination>
+                                                    <v-pagination v-model="pageComment" :length="lengthComment" :total-visible="5"></v-pagination>
                                                 </div>
                                             </v-tab-item>
+
+                                            <!-- tab tài liệu  -->
                                             <v-tab-item>
                                                 <v-file-input chips multiple label="Tải tệp lên"></v-file-input>
-                                                <!-- <v-pagination v-model="pageComment" :length="lengthComment"
-                                                        :total-visible="6"></v-pagination> -->
+                                                <div class="comment-list">
+                                                    <div v-for="file in fileList" class="a-comment">
+                                                        <img class="rounded-circle" :src="file.avatar" alt="my avatar" style="height: 40px">
+                                                        <a class="link-profile-member"> {{file.userName}}</a>
+                                                        <div class="file">
+                                                            <a v-for="f in file.files" href="f">{{createFileName(f)}}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <v-pagination v-model="pageFile" :length="lengthFile" :total-visible="6"></v-pagination>
                                             </v-tab-item>
+
+                                            <!-- tab lịch sử  -->
                                             <v-tab-item>
                                                 <v-timeline align-top dense>
                                                     <v-timeline-item color="primary" small>
                                                         <v-row class="pt-1">
-                                                            <v-col cols="3">
+                                                            <v-col cols="2">
                                                                 <p class="text-caption">16:26:22 29/12/2021</p>
                                                             </v-col>
-                                                            <v-col>
+                                                            <v-col class="p-2">
                                                                 <div class="text-caption">
                                                                     Nguyễn Kiên Trung Chỉnh sửa thông tin công việc theo vai trò người thực hiện. Tên công việc mới: Tạo UI ver2. Công việc cha mới: Tạo UI ver2.
                                                                 </div>
@@ -444,11 +513,11 @@
 
                                                     <v-timeline-item color="primary" small>
                                                         <v-row class="pt-1">
-                                                            <v-col cols="3">
+                                                            <v-col cols="2">
                                                                 <p class="text-caption">21:15:31 18/01/2022</p>
                                                             </v-col>
-                                                            <v-col>
-                                                                <div class="text-caption mb-2">
+                                                            <v-col class="p-2">
+                                                                <div class="text-caption">
                                                                     Nguyễn Kiên Trung Chỉnh sửa thông tin công việc theo vai trò người thực hiện. Mô tả công việc mới: Tạo card
                                                                 </div>
                                                             </v-col>
@@ -457,11 +526,11 @@
 
                                                     <v-timeline-item color="primary" small>
                                                         <v-row class="pt-1">
-                                                            <v-col cols="3">
+                                                            <v-col cols="2">
                                                                 <p class="text-caption">22:05:14 18/01/2022</p>
                                                             </v-col>
-                                                            <v-col>
-                                                                <div class="text-caption mb-2">
+                                                            <v-col class="p-2">
+                                                                <div class="text-caption">
                                                                     Nguyễn Kiên Trung Chỉnh sửa thông tin đánh giá công việc tháng 01-2022 theo vai trò người thực hiện. Ngày bắt đầu mới: 08:09 26/12/2021. Ngày kết thúc mới: 15:05 18/01/2022.
                                                                 </div>
                                                             </v-col>

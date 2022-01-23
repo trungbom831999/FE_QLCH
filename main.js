@@ -40,25 +40,43 @@ new Vue({
             friends: ['Nguyễn Văn A', 'Trần Thị B'],
             isUpdating: false,
             name: 'Nguyễn Văn A',
-            people: [{
+            people: [
+                { header: 'Nhóm thiết kế' },
+                {
                     name: 'Nguyễn Văn A',
-                    group: 'Group 1',
+                    group: 'Nhóm thiết kế',
                     avatar: srcs[1]
                 },
                 {
                     name: 'Trần Thị B',
-                    group: 'Group 1',
+                    group: 'Nhóm thiết kế',
                     avatar: srcs[2]
                 },
                 {
                     name: 'Lê Thị D',
-                    group: 'Group 1',
+                    group: 'Nhóm thiết kế',
                     avatar: srcs[3]
                 },
                 {
                     name: 'Trần Thị C',
-                    group: 'Group 1',
+                    group: 'Nhóm thiết kế',
                     avatar: srcs[2]
+                },
+                { header: 'Nhóm lập trình' },
+                {
+                    name: 'Nguyễn Văn A',
+                    group: 'Nhóm lập trình',
+                    avatar: srcs[1]
+                },
+                {
+                    name: 'Trần Thị B',
+                    group: 'Nhóm lập trình',
+                    avatar: srcs[2]
+                },
+                {
+                    name: 'Lê Thị D',
+                    group: 'Nhóm lập trình',
+                    avatar: srcs[3]
                 },
             ],
 
@@ -79,12 +97,51 @@ new Vue({
                 },
             ],
             pageComment: 1,
-            lengthComment: 15,
+            lengthComment: 6,
 
+            pageFile: 1,
+            lengthFile: 6,
+            fileList: [{
+                    avatar: '/img/avt1.png',
+                    userName: 'Trần Văn A',
+                    files: ['upload/direct/mb/lưu trữ.xslx', 'upload/direct/mb/báo_cáo.docx']
+                },
+                {
+                    avatar: '/img/avt2.png',
+                    userName: 'Trần Văn B',
+                    files: ['upload/direct/mb/api.xslx']
+                },
+                {
+                    avatar: '/img/avt3.png',
+                    userName: 'Trần Văn C',
+                    files: ['upload/direct/mb/slide.pdf']
+                },
+            ],
+
+            // color picker 
+            color: '#1976D2FF',
+            mask: '!#XXXXXXXX',
+            menuColor: false,
             //validate input
             rules: [
                 value => !!value || 'Không được để trống',
             ],
+        }
+    },
+    computed: {
+        swatchStyle() {
+            const {
+                color,
+                menu
+            } = this
+            return {
+                backgroundColor: color,
+                cursor: 'pointer',
+                height: '25px',
+                width: '60px',
+                borderRadius: menu ? '50%' : '4px',
+                transition: 'border-radius 200ms ease-in-out'
+            }
         }
     },
     created() {
@@ -98,12 +155,21 @@ new Vue({
             // modal.find('.modal-title').text(id);
         });
 
-        $('#workPopup').modal('show');
+        // $('#workPopup').modal('show');
     },
     methods: {
         remove(item) {
             const index = this.friends.indexOf(item.name)
             if (index >= 0) this.friends.splice(index, 1)
         },
+
+        addNewCard() {
+            $('#workPopup').modal('show');
+        },
+
+        createFileName(fileName) {
+            return fileName.split("/").at(-1);
+        }
+
     },
 })

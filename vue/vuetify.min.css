@@ -3565,7 +3565,7 @@ html.overflow-y-hidden {
 }
 
 .v-application p {
-    margin-bottom: 16px
+    /* margin-bottom: 16px */
 }
 
 @media only print {
